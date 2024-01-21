@@ -1,0 +1,111 @@
+#back{
+    border: none;
+    background-color: white;
+    
+}
+.point{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    
+}
+#caption{
+    font-size: x-small;
+    color: gray;
+}
+.background{
+    background-color: #f2f6fc;
+    border: 1px groove gainsboro;
+    border-radius: 4px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+/* CSS to style the form layout */
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top:20px ; /* Adjust margin between rows */
+  }
+  
+  label {
+    width: 120px;
+    margin-right: 10px;
+    font-weight: lighter;
+    font-size:small;
+    font-weight: bold;
+    color: darkblue;
+  }
+  
+  select {
+    width: 160px;
+    height: 30px; 
+    text-align: center;
+    border: none;
+    border-bottom: 1px groove gainsboro;
+    border-radius: 0px;
+    font-weight: bolder;
+    background-color:  #f2f6fc;
+  }
+ 
+  
+  #totaltickets{
+    width: 50px;
+    height: 20px;
+  }
+  #button{
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    width: 50%;
+    margin: auto;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  
+  
+.name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.line{
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.line p{
+    margin-left: 4px;
+    padding:2px;
+    font-size: small;
+}
+.line h5{
+  color: gray;
+  font-weight: lighter;
+
+}
+#tag{
+  background-color: whitesmoke;
+  border-radius: 4px;
+  padding: 4px 10px;
+  color:dodgerblue ;
+  font-weight: bold;
+  font-size: small;
+}
+#to{
+  margin-left: 8px;
+  margin-right: 8px;
+  color: darkblue;
+  font-size: small;
+}
+#gray{
+  color: black;
+  font-size: small;
+  font-weight: bold;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="gobus-favicon-black.png" type="image/x-icon">
+    <link rel="stylesheet" href="book.css">
+    <title>book tickets</title>
+</head>
+<body>
+    <button onclick="history.back()" id="back"><img src="left-arrow_8066397.png" alt="back" width="25px"></button>  
+   
+    <div class="name">
+      <div class="line">
+        <P style="font-weight: bolder;font-size: medium;">poovathal</P>
+    </div>
+      <div class="line">
+      <h5>Bus ID :</h5>
+      <h6 style="margin-left: 4px;">H7YUF57</h6>
+      </div>
+    
+  </div>
+  <div class="name">
+    <div >
+      <p id="tag">Private</p>
+    </div>
+    <div>
+      <p><span id="currentTime"></span></p>    </div>
+    <div style="display: flex;">
+      <p id="gray">athoor</p>
+      <P id="to">To</P>
+      <p id="gray">Dindigul</p>
+    </div>
+  </div>
+    <div class="background">
+ 
+    <div class="point">
+    <form action="{% url 'searchbar' %}" method="get">
+        
+            <div class="form-row">
+            <label for="Boarding Point">Boarding Point</label>
+         <select id="fromPlace" name="input1" required>
+            <option value="{{bus.stop1}}">{{bus.stop1}}</option>
+            <option value="{{bus.stop2}}">{{bus.stop2}}</option>
+            <option value="{{bus.stop3}}">{{bus.stop3}}</option>
+            <option value="{{bus.stop4}}">{{bus.stop4}}</option>
+            <option value="{{bus.stop5}}">{{bus.stop5}}</option>
+          </select>
+          </div>
+          <div class="form-row">
+            <label for="Destination">Destination</label>
+          <select id="toPlace" name="input2" required>
+            <option value="{{bus.stop1}}">{{bus.stop1}}</option>
+            <option value="{{bus.stop2}}">{{bus.stop2}}</option>
+            <option value="{{bus.stop3}}">{{bus.stop3}}</option>
+            <option value="{{bus.stop4}}">{{bus.stop4}}</option>
+            <option value="{{bus.stop5}}">{{bus.stop5}}</option>
+          </select>
+       </div>
+       <div class="form-row">
+        <label for="Total Tickets">Total Tickets</label>
+        <select id="totaltickets" name="number" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+       </div>
+          <input id="button" type="submit" value="Proceed" />
+        </form>
+    </div>
+</div>
+<P id="caption">Please select your boarding point and destination, then indicate the number of tickets needed. Once done, click the 'Proceed' button to proceed to payment.</P>
+
+<script>
+ function displayIndianTime() {
+  const options = {
+    timeZone: 'Asia/Kolkata', // Set the time zone to Indian Standard Time (IST)
+    hour12: true, // Use 12-hour format with AM/PM
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+  };
+
+  const indianTime = new Date().toLocaleString('en-US', options);
+
+  // Update the content of the element with the current Indian time
+  document.getElementById('currentTime').textContent = indianTime;
+}
+
+// Call the displayIndianTime function initially to display the Indian time immediately
+displayIndianTime();
+
+// Update the time every second
+setInterval(displayIndianTime, 1000);
+
+
+</script>
+</body>
+</html>
